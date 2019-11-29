@@ -32,16 +32,33 @@ namespace PatternPass
 
 		public override ToolStripMenuItem GetMenuItem(PluginMenuType t)
 		{
-			if (t != PluginMenuType.Main)
-				return null; // No menu items in other locations
-
-			ToolStripMenuItem tsmi = new ToolStripMenuItem
+			switch (t)
 			{
-				Text = "PatternPass Options",
-				Image = Resources.MenuIcon
-			};
+				case PluginMenuType.Main:
+				{
+					ToolStripMenuItem tsmi = new ToolStripMenuItem
+					{
+						Text = "PatternPass Options",
+						Image = Resources.MenuIcon
+					};
 
-			return tsmi;
+					return tsmi;
+				}
+
+				case PluginMenuType.Entry:
+				{
+					ToolStripMenuItem tsmi = new ToolStripMenuItem
+					{
+						Text = "PatternPass Options",
+						Image = Resources.MenuIcon
+					};
+
+					return tsmi;
+				}
+
+				default:
+					return null;
+			}
 		}
 	}
 }
