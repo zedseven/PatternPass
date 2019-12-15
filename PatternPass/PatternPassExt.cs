@@ -1,4 +1,5 @@
-﻿using KeePass.Plugins;
+﻿using System;
+using KeePass.Plugins;
 using PatternPass.Properties;
 using System.Drawing;
 using System.Windows.Forms;
@@ -22,6 +23,8 @@ namespace PatternPass
 			if (host == null) return false;
 
 			_host = host;
+
+			Interface.Init(_host);
 
 			return true;
 		}
@@ -49,9 +52,18 @@ namespace PatternPass
 				{
 					ToolStripMenuItem tsmi = new ToolStripMenuItem
 					{
-						Text = "PatternPass Options",
+						Text = "PatternPass...",
 						Image = Resources.MenuIcon
 					};
+					
+
+					ToolStripMenuItem tsmiConfig = new ToolStripMenuItem
+					{
+						Text = "Setup Pattern"
+					};
+					tsmiConfig.Click += OnEntrySetupClick;
+
+					tsmi.DropDownItems.Add(tsmiConfig);
 
 					return tsmi;
 				}
@@ -59,6 +71,16 @@ namespace PatternPass
 				default:
 					return null;
 			}
+		}
+
+		private void OnEntrySetupClick(object sender, EventArgs e)
+		{
+			if (_host.MainWindow.GetSelectedEntriesCount() != 1)
+				return;
+
+			var patternSetupForm = new PatternSetupForm(_host.MainWindow.GetSelectedEntry(true));
+			patternSetupForm.ShowDialog();
+			_host.MainWindow.RefreshEntriesList();
 		}
 	}
 }

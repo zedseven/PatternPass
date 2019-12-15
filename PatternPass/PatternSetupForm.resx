@@ -117,38 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="MenuIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PatternPass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Pattern_Ctor_Generic_Type_Mismatch" xml:space="preserve">
-	  <value>The type of {0} ({1}) does not match the type of {2} ({3}).</value>
-  </data>
-  <data name="Pattern_Ctor_Decode_Invalid_Format" xml:space="preserve">
-	  <value>Input string '{0}' does not match the format of an encoded pattern.</value>
-  </data>
-  <data name="Pattern_Ctor_Decode_Invalid_Dimensions" xml:space="preserve">
-	  <value>Invalid pattern dimensions in input encoded string '{0}'.</value>
-  </data>
-  <data name="Pattern_Ctor_Decode_Length_Mismatch" xml:space="preserve">
-	  <value>Invalid node list size in input string '{0}' - does not match the provided dimensions {1}x{2}.</value>
-  </data>
-  <data name="Pattern_Ctor_Decode_Invalid_Node_Value" xml:space="preserve">
-	  <value>Invalid node value '{0}' in input string '{1}'.</value>
-  </data>
-  <data name="Pattern_Ctor_Decode_Duplicate_Node_Values" xml:space="preserve">
-	  <value>Duplicate node values in input string '{0}'.</value>
-  </data>
-  <data name="Pattern_EnsureNodeOrder_Empty_Node_Array" xml:space="preserve">
-	  <value>Input node array has no rows.</value>
-  </data>
-  <data name="Pattern_EnsureNodeOrder_No_Columns" xml:space="preserve">
-	  <value>Input node array has no columns.</value>
-  </data>
-  <data name="Pattern_EnsureNodeOrder_All_Null_Nodes" xml:space="preserve">
-	  <value>Input node array is filled with only null values.</value>
-  </data>
-  <data name="Pattern_EnsureNodeOrder_Duplicate_Node_Values" xml:space="preserve">
-	  <value>Input node array has duplicate values.</value>
-  </data>
 </root>

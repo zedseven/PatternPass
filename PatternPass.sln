@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternPassTests", "PatternPassTests\PatternPassTests.csproj", "{DBBEF1E4-B248-4510-B5C0-1A453A1CCFFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2EE7D6AF-DED4-44A1-9CC4-A855329B56CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EE7D6AF-DED4-44A1-9CC4-A855329B56CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EE7D6AF-DED4-44A1-9CC4-A855329B56CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBBEF1E4-B248-4510-B5C0-1A453A1CCFFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBBEF1E4-B248-4510-B5C0-1A453A1CCFFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBBEF1E4-B248-4510-B5C0-1A453A1CCFFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBBEF1E4-B248-4510-B5C0-1A453A1CCFFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

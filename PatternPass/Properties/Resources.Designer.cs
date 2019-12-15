@@ -69,5 +69,95 @@ namespace PatternPass.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Duplicate node values in input string &apos;{0}&apos;..
+        /// </summary>
+        internal static string Pattern_Ctor_Decode_Duplicate_Node_Values {
+            get {
+                return ResourceManager.GetString("Pattern_Ctor_Decode_Duplicate_Node_Values", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid pattern dimensions in input encoded string &apos;{0}&apos;..
+        /// </summary>
+        internal static string Pattern_Ctor_Decode_Invalid_Dimensions {
+            get {
+                return ResourceManager.GetString("Pattern_Ctor_Decode_Invalid_Dimensions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input string &apos;{0}&apos; does not match the format of an encoded pattern..
+        /// </summary>
+        internal static string Pattern_Ctor_Decode_Invalid_Format {
+            get {
+                return ResourceManager.GetString("Pattern_Ctor_Decode_Invalid_Format", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid node value &apos;{0}&apos; in input string &apos;{1}&apos;..
+        /// </summary>
+        internal static string Pattern_Ctor_Decode_Invalid_Node_Value {
+            get {
+                return ResourceManager.GetString("Pattern_Ctor_Decode_Invalid_Node_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid node list size in input string &apos;{0}&apos; - does not match the provided dimensions {1}x{2}..
+        /// </summary>
+        internal static string Pattern_Ctor_Decode_Length_Mismatch {
+            get {
+                return ResourceManager.GetString("Pattern_Ctor_Decode_Length_Mismatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The type of {0} ({1}) does not match the type of {2} ({3})..
+        /// </summary>
+        internal static string Pattern_Ctor_Generic_Type_Mismatch {
+            get {
+                return ResourceManager.GetString("Pattern_Ctor_Generic_Type_Mismatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input node array is filled with only null values..
+        /// </summary>
+        internal static string Pattern_EnsureNodeOrder_All_Null_Nodes {
+            get {
+                return ResourceManager.GetString("Pattern_EnsureNodeOrder_All_Null_Nodes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input node array has duplicate values..
+        /// </summary>
+        internal static string Pattern_EnsureNodeOrder_Duplicate_Node_Values {
+            get {
+                return ResourceManager.GetString("Pattern_EnsureNodeOrder_Duplicate_Node_Values", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input node array has no rows..
+        /// </summary>
+        internal static string Pattern_EnsureNodeOrder_Empty_Node_Array {
+            get {
+                return ResourceManager.GetString("Pattern_EnsureNodeOrder_Empty_Node_Array", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input node array has no columns..
+        /// </summary>
+        internal static string Pattern_EnsureNodeOrder_No_Columns {
+            get {
+                return ResourceManager.GetString("Pattern_EnsureNodeOrder_No_Columns", resourceCulture);
+            }
+        }
     }
 }
