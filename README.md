@@ -1,8 +1,8 @@
 # PatternPass
-A KeePass plugin that allows storage and viewing of pattern-based passwords (like the Android lock-screen).
+A KeePass plugin that allows storage and viewing of pattern-based passwords (like the Android lock-screen). I actually made this to store my [Apex Launcher](https://www.apexlauncher.com/) App Lock pattern, but it works for almost anything of that format.
 
 
-# Setting Up and Storing Drawing Patterns is Very Easy
+# Setting Up and Storing Drawn Patterns is Very Easy
 To store a pattern in your password database, all you have to do is open the setup window of PatternPass, pick the dimensions of the pattern you wish to store, and set the order:
 ![An animation of the plugin's setup function for storing a pattern.](/Documentation/Media/PatternPassDemoSetup.gif "PatternPass allows for quick and easy storage of complex drawn patterns.")
 
