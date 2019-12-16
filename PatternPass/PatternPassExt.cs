@@ -35,42 +35,32 @@ namespace PatternPass
 
 		public override ToolStripMenuItem GetMenuItem(PluginMenuType t)
 		{
-			switch (t)
+			if (t != PluginMenuType.Entry)
+				return null;
+
+			ToolStripMenuItem tsmi = new ToolStripMenuItem
 			{
-				case PluginMenuType.Main:
-				{
-					ToolStripMenuItem tsmi = new ToolStripMenuItem
-					{
-						Text = "PatternPass Options",
-						Image = Resources.MenuIcon
-					};
+				Text = Resources.PatternPassExt_GetMenuItem_PatternPass_Plugin,
+				Image = Resources.MenuIcon
+			};
 
-					return tsmi;
-				}
+			ToolStripMenuItem tsmiSetup = new ToolStripMenuItem
+			{
+				Text = Resources.PatternPassExt_GetMenuItem_Setup_Pattern
+			};
+			tsmiSetup.Click += OnEntrySetupClick;
 
-				case PluginMenuType.Entry:
-				{
-					ToolStripMenuItem tsmi = new ToolStripMenuItem
-					{
-						Text = "PatternPass...",
-						Image = Resources.MenuIcon
-					};
-					
+			ToolStripMenuItem tsmiDisplay = new ToolStripMenuItem
+			{
+				Text = Resources.PatternPassExt_GetMenuItem_Show_Pattern,
+				//Enabled = _host.MainWindow.GetSelectedEntriesCount() == 1 && _host.MainWindow.GetSelectedEntry(true).Strings.Get(Constants.PatternStringName) != null
+			};
+			tsmiDisplay.Click += OnEntryDisplayClick;
 
-					ToolStripMenuItem tsmiConfig = new ToolStripMenuItem
-					{
-						Text = "Setup Pattern"
-					};
-					tsmiConfig.Click += OnEntrySetupClick;
+			tsmi.DropDownItems.Add(tsmiSetup);
+			tsmi.DropDownItems.Add(tsmiDisplay);
 
-					tsmi.DropDownItems.Add(tsmiConfig);
-
-					return tsmi;
-				}
-
-				default:
-					return null;
-			}
+			return tsmi;
 		}
 
 		private void OnEntrySetupClick(object sender, EventArgs e)
@@ -78,8 +68,18 @@ namespace PatternPass
 			if (_host.MainWindow.GetSelectedEntriesCount() != 1)
 				return;
 
-			var patternSetupForm = new PatternSetupForm(_host.MainWindow.GetSelectedEntry(true));
+			PatternSetupForm patternSetupForm = new PatternSetupForm(_host.MainWindow.GetSelectedEntry(true));
 			patternSetupForm.ShowDialog();
+			_host.MainWindow.RefreshEntriesList();
+		}
+
+		private void OnEntryDisplayClick(object sender, EventArgs e)
+		{
+			if (_host.MainWindow.GetSelectedEntriesCount() != 1)
+				return;
+
+			PatternDisplayForm patternDisplayForm = new PatternDisplayForm(_host.MainWindow.GetSelectedEntry(true));
+			patternDisplayForm.ShowDialog();
 			_host.MainWindow.RefreshEntriesList();
 		}
 	}

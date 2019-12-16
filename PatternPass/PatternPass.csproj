@@ -48,8 +48,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="Interface.cs" />
     <Compile Include="Pattern.cs" />
+    <Compile Include="PatternDisplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatternDisplayForm.Designer.cs">
+      <DependentUpon>PatternDisplayForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PatternPassExt.cs" />
     <Compile Include="PatternSetupForm.cs">
       <SubType>Form</SubType>
@@ -65,20 +72,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="PatternDisplayForm.resx">
+      <DependentUpon>PatternDisplayForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PatternSetupForm.resx">
       <DependentUpon>PatternSetupForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MenuIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\PatternPass.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

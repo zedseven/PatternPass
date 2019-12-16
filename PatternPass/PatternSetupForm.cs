@@ -1,5 +1,6 @@
 ﻿using KeePassLib;
 using KeePassLib.Security;
+using PatternPass.Properties;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -8,11 +9,10 @@ using System.Windows.Forms;
 
 namespace PatternPass
 {
-	public partial class PatternSetupForm : Form
+	public sealed partial class PatternSetupForm : Form
 	{
 		private readonly PwEntry _entry;
 
-		private const string PatternStringName = "Stored Pattern";
 		private const int DefaultRows = 3;
 		private const int DefaultColumns = 3;
 		private const string InputNameBase = "input";
@@ -20,14 +20,13 @@ namespace PatternPass
 		private const int InputHeight = 35;
 		private const int InputGridTabIndexBuffer = 10;
 
-		private PwEntry Entry { get { return _entry; } }
-
 		private Pattern Pattern { get; set; }
 
 		internal PatternSetupForm(PwEntry entry)
 		{
 			_entry = entry;
 			InitializeComponent();
+			Text = string.Format(Resources.PatternSetupForm_Title, _entry.Strings.ReadSafe(PwDefs.TitleField));
 			if (LoadPattern())
 				return;
 			NewPattern();
@@ -77,7 +76,7 @@ namespace PatternPass
 
 		private bool LoadPattern()
 		{
-			ProtectedString loadedPatternProtectedString = Entry.Strings.Get(PatternStringName);
+			ProtectedString loadedPatternProtectedString = _entry.Strings.Get(Constants.PatternStringName);
 			if (loadedPatternProtectedString == null)
 				return false;
 			string loadedPatternString = loadedPatternProtectedString.ReadString();
@@ -87,7 +86,7 @@ namespace PatternPass
 			GenerateInputGrid();
 			rowsInput.Value = Pattern.Rows;
 			columnsInput.Value = Pattern.Columns;
-			Interface.UpdateStatus("Pattern for entry '" + Entry.Strings.ReadSafe(PwDefs.TitleField) + "' loaded.");
+			Interface.UpdateStatus(string.Format("Pattern for entry '{0}' loaded.", _entry.Strings.ReadSafe(PwDefs.TitleField)));
 			return true;
 		}
 		private void LoadPattern(object sender, EventArgs e)
@@ -99,14 +98,14 @@ namespace PatternPass
 		{
 			if (!RefreshPattern())
 				return;
-			Entry.Strings.Set(PatternStringName, new ProtectedString(true, Pattern.ToString()));
-			Interface.UpdateStatus("Pattern for entry '" + Entry.Strings.ReadSafe(PwDefs.TitleField) + "' saved.");
+			_entry.Strings.Set(Constants.PatternStringName, new ProtectedString(true, Pattern.ToString()));
+			Interface.UpdateStatus(string.Format("Pattern for entry '{0}' saved.", _entry.Strings.ReadSafe(PwDefs.TitleField)));
 		}
 
 		private void RemovePattern()
 		{
-			if(Entry.Strings.Remove(PatternStringName))
-				Interface.UpdateStatus("Pattern for entry '" + Entry.Strings.ReadSafe(PwDefs.TitleField) + "' removed.");
+			if(_entry.Strings.Remove(Constants.PatternStringName))
+				Interface.UpdateStatus(string.Format("Pattern for entry '{0}' removed.", _entry.Strings.ReadSafe(PwDefs.TitleField)));
 		}
 		private void RemovePattern(object sender, EventArgs e)
 		{

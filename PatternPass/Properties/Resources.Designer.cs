@@ -159,5 +159,50 @@ namespace PatternPass.Properties {
                 return ResourceManager.GetString("Pattern_EnsureNodeOrder_No_Columns", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos; Display.
+        /// </summary>
+        internal static string PatternDisplayForm_Title {
+            get {
+                return ResourceManager.GetString("PatternDisplayForm_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PatternPass Plugin.
+        /// </summary>
+        internal static string PatternPassExt_GetMenuItem_PatternPass_Plugin {
+            get {
+                return ResourceManager.GetString("PatternPassExt_GetMenuItem_PatternPass_Plugin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Setup Pattern.
+        /// </summary>
+        internal static string PatternPassExt_GetMenuItem_Setup_Pattern {
+            get {
+                return ResourceManager.GetString("PatternPassExt_GetMenuItem_Setup_Pattern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Pattern.
+        /// </summary>
+        internal static string PatternPassExt_GetMenuItem_Show_Pattern {
+            get {
+                return ResourceManager.GetString("PatternPassExt_GetMenuItem_Show_Pattern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos; Setup.
+        /// </summary>
+        internal static string PatternSetupForm_Title {
+            get {
+                return ResourceManager.GetString("PatternSetupForm_Title", resourceCulture);
+            }
+        }
     }
 }
