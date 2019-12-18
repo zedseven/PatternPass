@@ -3,6 +3,7 @@ using KeePass.Plugins;
 using PatternPass.Properties;
 using System.Drawing;
 using System.Windows.Forms;
+using KeePass.Util;
 
 namespace PatternPass
 {
@@ -13,16 +14,18 @@ namespace PatternPass
 	{
 		private IPluginHost _host;
 
-		public override Image SmallIcon
-		{
-			get { return Resources.MenuIcon; }
-		}
+		public override Image SmallIcon { get { return Resources.MenuIcon; } }
+
+		public override string UpdateUrl { get { return "https://ztdp.ca/utility/keepass-plugins-ztdp.txt.gz"; } }
 
 		public override bool Initialize(IPluginHost host)
 		{
 			if (host == null) return false;
 
 			_host = host;
+
+			//Set the version information file signature
+			UpdateCheckEx.SetFileSigKey(UpdateUrl, Resources.PatternPassExt_UpdateCheckFileSigKey);
 
 			Interface.Init(_host);
 

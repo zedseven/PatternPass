@@ -197,6 +197,15 @@ namespace PatternPass.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;RSAKeyValue&gt;&lt;Modulus&gt;sxOD2un0IddS55rX6hg5AFtP5yYBjF54rgJn8LX4Z5A10oX/lpw44bWvrI3FKC0GbufPwjRcoVsUKCbuJuFfoKJCp0PDPRZB3qiA9dUdfpMLeC5A5kLSAG7c5NxqYJOlJfykJCgAKqmNknWqDdsjOrF9RDzfZcz3P7DWpvc3KGgLzz6gUUD67YVAQVncv7N1NZ5rUoaVDdurpOO82WrTrX2YVg1eXK7pfzD0VziOOmlubI5lhOZrm9aFscY80QGZaTbBaPQJHksfbZBSM6Uje1bun7epAs/axEst/T7rr8Ekz4lsoco53q1PeyJvL5uO8al3Dl9mHhE1yyEQ8lsqRHLN5y7CLiufjGvRLoaN0eImm87iORMbRMBTmfW83uhi4JWPUkL8RPPx9ehYJGUVFOlA8ttRvFaSPowXqTFFTuB+fwQYMhr+W/jOkgi2YbKajm3zk8ktGpNrQGjEJvkjJmejhHH8YNTJpC1K95yzbZ [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string PatternPassExt_UpdateCheckFileSigKey {
+            get {
+                return ResourceManager.GetString("PatternPassExt_UpdateCheckFileSigKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &apos;{0}&apos; Setup.
         /// </summary>
         internal static string PatternSetupForm_Title {
