@@ -1,4 +1,6 @@
 # PatternPass
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A KeePass plugin that allows storage and viewing of pattern-based passwords (like the Android lock-screen). I actually made this to store my [Apex Launcher](https://www.apexlauncher.com/) App Lock pattern, but it works for almost anything of that format.
 
 
